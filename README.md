@@ -1,5 +1,5 @@
 [![logo](https://raw.githubusercontent.com/dperson/samba/master/logo.jpg)](https://www.samba.org)
-[![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png = 50x50)](https://docs.microsoft.com/en-us/dotnet/core/)
+[![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png)](https://docs.microsoft.com/en-us/dotnet/core/)
 # .NET Core 3
 This is the same version of dperson/samba(https://github.com/dperson/samba) includin DotNet Core 3 runtime
 
