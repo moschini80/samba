@@ -1,7 +1,7 @@
 [![logo](https://raw.githubusercontent.com/dperson/samba/master/logo.jpg)](https://www.samba.org)
 [![logo](https://images.squarespace-cdn.com/content/v1/58e978bde58c6214d4a77c5c/1542068407031-8GGM1KO36MTCYZ08BI2U/ke17ZwdGBToddI8pDm48kBhs0kXmJu3pAC_LFF99rKVZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7eaDBaxyzPPG4B3J3_Z93rYLky5fjRrZeLmMK3F2aytfjfg4x4lXesDnM4MUpb-Vdw/2_dot_net_core_logo.png?format=300w)](https://docs.microsoft.com/en-us/dotnet/core/)
 # .NET Core 3
-This is the same version of dperson/samba(https://github.com/dperson/samba) includin DotNet Core 3 runtime
+This is the same version of [dperson/samba](https://github.com/dperson/samba) includin DotNet Core 3 runtime
 
 # Samba
 
