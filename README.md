@@ -1,7 +1,7 @@
 [![logo](https://raw.githubusercontent.com/dperson/samba/master/logo.jpg)](https://www.samba.org)
 [![logo](https://images.squarespace-cdn.com/content/v1/58e978bde58c6214d4a77c5c/1542068407031-8GGM1KO36MTCYZ08BI2U/ke17ZwdGBToddI8pDm48kBhs0kXmJu3pAC_LFF99rKVZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7eaDBaxyzPPG4B3J3_Z93rYLky5fjRrZeLmMK3F2aytfjfg4x4lXesDnM4MUpb-Vdw/2_dot_net_core_logo.png?format=300w)](https://docs.microsoft.com/en-us/dotnet/core/)
 # .NET Core 3
-This is the same version of [dperson/samba](https://github.com/dperson/samba) includin DotNet Core 3 runtime
+This is the same version of [dperson/samba](https://github.com/dperson/samba) includin DotNet Core 3 runtime.
 
 # Samba
 
@@ -19,17 +19,17 @@ By default there are no shares configured, additional ones can be added.
 
 ## Hosting a Samba instance
 
-    sudo docker run -it -p 139:139 -p 445:445 -d dperson/samba -p
+    sudo docker run -it -p 139:139 -p 445:445 -d moschini80/sambacore -p
 
 OR set local storage:
 
     sudo docker run -it --name samba -p 139:139 -p 445:445 \
                 -v /path/to/directory:/mount \
-                -d dperson/samba -p
+                -d moschini80/sambacore -p
 
 ## Configuration
 
-    sudo docker run -it --rm dperson/samba -h
+    sudo docker run -it --rm moschini80/sambacore -h
     Usage: samba.sh [-opt] [command]
     Options (fields in '[]' are optional, '<>' are required):
         -h          This help
@@ -108,11 +108,11 @@ Any of the commands can be run at creation with `docker run` or later with
 
 ### Setting the Timezone
 
-    sudo docker run -it -e TZ=EST5EDT -p 139:139 -p 445:445 -d dperson/samba -p
+    sudo docker run -it -e TZ=EST5EDT -p 139:139 -p 445:445 -d moschini80/sambacore -p
 
 ### Start an instance creating users and shares:
 
-    sudo docker run -it -p 139:139 -p 445:445 -d dperson/samba -p \
+    sudo docker run -it -p 139:139 -p 445:445 -d moschini80/sambacore -p \
                 -u "example1;badpass" \
                 -u "example2;badpass" \
                 -s "public;/share" \
@@ -133,7 +133,7 @@ Add the `-p` option to the end of your options to the container, or set the
 
     sudo docker run -it --name samba -p 139:139 -p 445:445 \
                 -v /path/to/directory:/mount \
-                -d dperson/samba -p
+                -d moschini80/sambacore -p
 
 * High memory usage by samba. Multiple people have reported high memory usage
 that's never freed by the samba processes. Recommended work around below:
@@ -143,7 +143,7 @@ docker_compose.yml files, IE:
 
     sudo docker run -it --name samba -m 512m -p 139:139 -p 445:445 \
                 -v /path/to/directory:/mount \
-                -d dperson/samba -p
+                -d moschini80/sambacore -p
 
 * Attempting to connect with the `smbclient` commandline tool. By default samba
 still tries to use SMB1, which is depriciated and has security issues. This
@@ -151,7 +151,3 @@ container defaults to SMB2, which for no decernable reason even though it's
 supported is disabled by default so run the command as `smbclient -m SMB3`, then
 any other options you would specify.
 
-## Issues
-
-If you have any problems with or questions about this image, please contact me
-through a [GitHub issue](https://github.com/dperson/samba/issues).
